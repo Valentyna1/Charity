@@ -46,3 +46,191 @@
 		}
 	}
 }
+.standard-section{
+	padding: 120px 0;
+	h3{
+		margin-bottom: 30px;
+	}
+	.carousel-wrap{
+		padding-bottom: 80px;
+	}
+	.event-btn{
+		padding-top: 80px;
+		text-align: center;
+	}
+}
+.event-item{
+	.event-item-img{
+		position: relative;
+		&:hover{
+			.on-event-hover{
+				opacity: 1;
+			}
+		}
+		.on-event-hover{
+			opacity: 0;
+			background-color: rgba(0, 0, 0, .3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all .5s linear;
+			a{
+				width: 60px;
+				height: 60px;
+				background: #cf1b41;
+				border-radius: 50%;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 25px;
+
+			}
+		}
+	}
+	.event-item-desq{
+		padding: 30px 0;
+		h6{
+			color: $gray-dark;
+			font-size: 16px;
+			font-family: 'montserratregular';
+			margin-bottom: 20px;
+		}
+	}
+	.event-item-location{
+		.country{
+			color: $gray-dark;
+			font-family: 'montserratregular';
+			font-size: 12px;
+			span{
+				margin-right: 10px;
+				font-size: 14px;
+			}
+		}
+		.progress{
+			margin: 10px 0;
+		}		
+	}
+	.event-item-info{
+		dl{
+			display: inline-block;
+			font-family: 'montserratregular';
+			& + dl{
+				margin-left: 20px;
+			}
+			dt{
+				color: $gray-dark;				
+			}
+			dd{
+				font-size: 12px;
+			}
+		}
+	}
+	
+}
+.section-w-bg{
+	padding: 50px 0;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	&.story{
+		background: url('../img/our-history-bg.jpg') no-repeat top center / cover;
+	}
+	&.share{
+		background: url('../img/our-share-bg.jpg') no-repeat top center / cover;
+	}
+	&.white-text-color{
+		color: #fff;
+	}
+	h3{
+		font-family: 'montserratregular';
+		margin-bottom: 25px;
+	}
+}
+.share{
+	.section-w-bg-text{
+		h3{
+			color: $gray-dark;
+		}
+		p{
+			color: $gray-base;
+			margin-bottom: 30px;
+		}	
+	}		
+}
+.donation-item{
+	display: flex;
+	margin: 20px auto;
+	.donation-item-img{
+		position: relative;
+		border: 2px solid #f1eef4;
+		border-radius: 50%;
+		height: 80px;
+		width: 80px;
+		&.donation-img-1{
+			background: url('../img/donation-img-1.png') no-repeat center center;			
+		}
+		&.donation-img-2{
+			background: url('../img/donation-img-2.png') no-repeat center center;			
+		}
+		&.donation-img-3{
+			background: url('../img/donation-img-3.png') no-repeat center center;			
+		}
+		&.donation-img-4{
+			background: url('../img/donation-img-4.png') no-repeat center center;			
+		}
+		&:hover{
+			background-color: #f1eef4;
+		}
+	}
+	.donation-item-text{
+		margin: 15px 0 0 25px;
+		width: 80%;
+		h5{
+			font-size: 18px;
+			color: $gray-dark;
+			font-family: 'montserratregular';
+			margin-bottom: 10px;
+		}
+	}
+}
+.donors{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	.donors-item{		
+		dl{
+			margin-top: 20px;
+			dt{
+				color: $gray-dark;
+				font-family: 'montserratregular';
+				font-size: 18px;				
+			}			
+		}
+	}
+}
+footer{
+	min-height: 80px;
+	background: #202020;
+	display: flex;
+	align-items: center;
+	.footer-section{
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+		span{
+			font-size: 12px;
+			font-family: 'montserratregular';
+			& + span{
+				color: #fff;
+			}
+		}
+	}	
+}
