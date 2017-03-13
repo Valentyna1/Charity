@@ -1,5 +1,10 @@
 @import "custom-variables";
-
+header{
+	&.on-scroll{
+		transition: all .5s linear;
+		background: #333;
+	}
+}
 .inner{
 	height: 100vh;
 	background-image: url('../img/inner-bg.jpg');
@@ -12,6 +17,10 @@
 	flex-direction: row;
 	justify-content: center;
 	align-content: space-between;
+	@media (max-height: 600px) {
+		height: auto;
+		padding-bottom: 50px;
+	}
 	.title{
 		font-family: 'montserratregular'; 
 	}
@@ -26,23 +35,33 @@
 		.title{
 			font-size: 60px;
 			margin-bottom: 2vh;
+			@media (max-height: 600px) {
+				font-size: 40px;
+			}
 		}
 		p{
 			font-size: 18px;
 			padding: 0 5vw;
 		}
 		.btn{
-			margin-top: 9vh;
+			margin: 9vh;
 		}
 	}
 	.inner-advantages{
 		padding-bottom: 6.5vh;
+		@media (max-height: 600px) {
+			padding-bottom: 0;
+		}
 		.title{
 			text-transform: uppercase;
 			margin-bottom: 3vh;
 		}
 		p{
 			width: 90%;
+			@media (max-height: 600px) {
+				width: 100%;
+				padding-bottom: 4vh;
+			}
 		}
 	}
 }
@@ -62,6 +81,10 @@
 .event-item{
 	.event-item-img{
 		position: relative;
+		padding-top: 10px;
+		img{
+			width: 100%;
+		}
 		&:hover{
 			.on-event-hover{
 				opacity: 1;
@@ -162,11 +185,31 @@
 			color: $gray-base;
 			margin-bottom: 30px;
 		}	
+	}
+	.section-w-bg-btn{
+		@media (max-width: 767px) {
+			text-align: center;
+		}		
 	}		
+}
+.btn-default{
+	&:hover{
+		background: $btn-default-color;
+		color: #fff;
+	}
+}
+.donation-wrap{
+	[class^='col'] {
+		&:nth-child(even) {
+			.donation-item{
+				padding-left: 40px;
+			}
+		}
+	}
 }
 .donation-item{
 	display: flex;
-	margin: 20px auto;
+	padding: 20px auto;
 	.donation-item-img{
 		position: relative;
 		border: 2px solid #f1eef4;
@@ -202,10 +245,17 @@
 }
 .donors{
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	text-align: center;
-	.donors-item{		
+	.donors-item{	
+		@media (max-width: 767px) {
+			width: 50%;
+		}	
+		@media (max-width: 479px) {
+			width: 100%;
+		}
 		dl{
 			margin-top: 20px;
 			dt{
@@ -225,11 +275,20 @@ footer{
 		display: flex;
 		justify-content: space-between;
 		padding: 20px 0;
+		font-size: 12px;
+		@media (max-width: 479px) {
+			display: block;
+			text-align: center;
+		}
 		span{
-			font-size: 12px;
+			padding-right: 10px;
 			font-family: 'montserratregular';
-			& + span{
-				color: #fff;
+		}
+		ul{
+			text-align: right;
+			li{
+				display: inline-block;
+				color: #fff;				
 			}
 		}
 	}	

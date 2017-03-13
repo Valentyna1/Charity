@@ -7,6 +7,8 @@ var merge = require('merge-stream');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 
+var imagemin = require('gulp-imagemin');
+
 var fontName = 'planer-icons';
 
 gulp.task('iconfont', function(){
@@ -39,16 +41,15 @@ gulp.task('sprite', function () {
         cssName: '_sprite.scss',
         imgPath: '../img/sprite.png',
     }));
+});
 
-    var imgStream = spriteData.img
-    .pipe(gulp.dest('app/img/'));
- 
-    var cssStream = spriteData.css
-    .pipe(gulp.dest('dist/sass/'));
+gulp.task('imgmin', function(){
+    gulp.src('dist/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('app/img'));
 
-    return merge(imgStream, cssStream);
 });
 
 gulp.task('watch', ['sass'], function(){
 	gulp.watch('dist/sass/**/*.scss', ['sass']);
-})
+});
