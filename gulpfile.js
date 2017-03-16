@@ -40,7 +40,14 @@ gulp.task('sprite', function () {
         imgName: 'sprite.png',
         cssName: '_sprite.scss',
         imgPath: '../img/sprite.png',
+        padding: 3,
     }));
+    var imgStream = spriteData.img
+        .pipe(gulp.dest('app/img/'));
+
+var cssStream = spriteData.css
+.pipe(gulp.dest('dist/scss/'));
+return merge(imgStream, cssStream);
 });
 
 gulp.task('imgmin', function(){

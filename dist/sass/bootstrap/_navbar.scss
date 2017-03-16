@@ -11,7 +11,7 @@
 .navbar {
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-  margin-bottom: $navbar-margin-bottom;
+  // margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
@@ -426,7 +426,7 @@
       color: $navbar-default-link-color;
       @media (max-width: $grid-float-breakpoint-max) {
         text-align: right;
-        background: rgba(255, 255, 255, .90);
+        background: #333;
         color: $gray-base;
         padding-right: 15px;
         font-size: 16px;
@@ -438,7 +438,7 @@
         border-color: $navbar-default-link-border-color;
         @media (max-width: $grid-float-breakpoint-max){
           color: #fff;
-          background-color: $gray-base;
+          background-color: #333;
           border-color: $navbar-default-link-border-color;
         }
       }
@@ -452,7 +452,7 @@
         border-color: $navbar-default-link-border-color;
         @media (max-width: $grid-float-breakpoint-max){
           color: #fff;
-          background-color: $gray-base;
+          background-color: #333;
           border-color: $navbar-default-link-border-color;
         }
       }

@@ -79,6 +79,9 @@ header{
 	}
 }
 .event-item{
+	@media (max-width: 767px) {
+		margin-bottom: 20px;		
+	}
 	.event-item-img{
 		position: relative;
 		padding-top: 10px;
@@ -140,11 +143,13 @@ header{
 		}		
 	}
 	.event-item-info{
+		display: flex;
+		flex-direction: row;
 		dl{
-			display: inline-block;
+			// display: inline-block;
 			font-family: 'montserratregular';
 			& + dl{
-				margin-left: 20px;
+				padding-left: 20px;
 			}
 			dt{
 				color: $gray-dark;				
@@ -167,6 +172,7 @@ header{
 	}
 	&.share{
 		background: url('../img/our-share-bg.jpg') no-repeat top center / cover;
+
 	}
 	&.white-text-color{
 		color: #fff;
@@ -176,8 +182,16 @@ header{
 		margin-bottom: 25px;
 	}
 }
-.share{
+.share{	
 	.section-w-bg-text{
+		@media (max-width: 767px) {
+			background: rgba(255,255,255,0.5);
+			padding: 10px;
+			border-radius: 30px 30px 0 0;
+			p{
+				color: $gray-dark;
+			}
+		}
 		h3{
 			color: $gray-dark;
 		}
@@ -189,6 +203,11 @@ header{
 	.section-w-bg-btn{
 		@media (max-width: 767px) {
 			text-align: center;
+			background: rgba(255,255,255,0.5);
+			padding: 10px;
+			border-radius: 0 0 30px 30px;
+
+
 		}		
 	}		
 }
@@ -198,35 +217,41 @@ header{
 		color: #fff;
 	}
 }
-.donation-wrap{
-	[class^='col'] {
-		&:nth-child(even) {
-			.donation-item{
-				padding-left: 40px;
-			}
-		}
-	}
-}
 .donation-item{
 	display: flex;
-	padding: 20px auto;
+	flex-direction: row;
+	padding: 25px 0;
 	.donation-item-img{
-		position: relative;
 		border: 2px solid #f1eef4;
 		border-radius: 50%;
-		height: 80px;
-		width: 80px;
-		&.donation-img-1{
-			background: url('../img/donation-img-1.png') no-repeat center center;			
+		min-width: 80px;
+		max-height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.donation-img-1{
+			background: url('../img/sprite.png') no-repeat center center;
+			background-position: -43px -43px;	
+			width: 40px;
+			height: 34px;
 		}
-		&.donation-img-2{
-			background: url('../img/donation-img-2.png') no-repeat center center;			
+		.donation-img-2{
+			background: url('../img/sprite.png') no-repeat center center;
+			background-position: 0px -43px;	
+			width: 40px;
+			height: 39px;			
 		}
-		&.donation-img-3{
-			background: url('../img/donation-img-3.png') no-repeat center center;			
+		.donation-img-3{
+			background: url('../img/sprite.png') no-repeat center center;
+			background-position: 0px 0px;	
+			width: 40px;
+			height: 40px;			
 		}
-		&.donation-img-4{
-			background: url('../img/donation-img-4.png') no-repeat center center;			
+		.donation-img-4{
+			background: url('../img/sprite.png') no-repeat center center;
+			background-position: -43px 0px;	
+			width: 40px;
+			height: 40px;			
 		}
 		&:hover{
 			background-color: #f1eef4;
